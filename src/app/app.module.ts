@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { PipecustomPipe } from './pipecustom.pipe';
+import { AboutComponent } from './about/about.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PipecustomPipe
+    PipecustomPipe,
+    AboutComponent,
+    PageNotFoundComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
