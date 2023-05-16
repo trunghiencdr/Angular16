@@ -1,17 +1,8 @@
 <div class="test">
     <p> This is home component!</p>
-    <h1>This is one-way binding use '[]' to get value from component object</h1>
-    <p>Hello, {{name}}</p>
-    <input type="text" value="{{name}}" title="This is {{name}}">
-    <br>
-    <input type="text" [value]="name" [title]="'this is ' + name">
-    <h2 *ngIf = "age > 18"> You are teeneger</h2>
-    <h2 *ngIf = "age <= 18"> You are young</h2>
-    <h1>This is one-way binding use '()' to call method in component object </h1>
-    <button (click) = "resetName()">Reset name</button>
-
-    <h1> This is two-way binding use both '[]' and '()' to implement for this feature</h1>
-
-    <p>This is use two-way binding to update real-time name change</p>
-    <input type="text" [(ngModel)]="name">
+    <input type="number" [(ngModel)]="age">
+    <br />
+    <div *ngIf="age <= 18; then young; else old"></div>
+    <ng-template #young>You are young</ng-template>
+    <ng-template #old>You are old</ng-template>
 </div>
