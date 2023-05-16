@@ -1,8 +1,31 @@
 <div class="test">
     <p> This is home component!</p>
-    <input type="number" [(ngModel)]="age">
-    <br />
-    <div *ngIf="age <= 18; then young; else old"></div>
-    <ng-template #young>You are young</ng-template>
-    <ng-template #old>You are old</ng-template>
+    <h1>This is string array</h1>
+    <table>
+        <th>Order</th>
+        <th>Name</th>
+        <tr *ngFor="let fruit of fruits; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{fruit}}</td>
+        </tr>
+    </table>
+
+    <h2>This is object array</h2>
+    <table>
+        <th>Order</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Sale</th>
+        <tr *ngFor="let fruit of fruits2; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{fruit.name}}</td>
+            <td>
+                <span [ngClass]="{'negative-number': fruit.price < 0}">{{fruit.price}}</span>
+            </td>
+            <td>
+                <span *ngIf="fruit.isSale === true">Up sale</span>
+            </td>
+        </tr>
+    </table>
+
 </div>
