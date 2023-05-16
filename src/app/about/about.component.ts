@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   public username = 'admin';
+  public color = 'pink'
 }

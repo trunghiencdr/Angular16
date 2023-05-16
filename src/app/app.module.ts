@@ -9,6 +9,7 @@ import { PipecustomPipe } from './pipecustom.pipe';
 import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SearchComponent } from './search/search.component';
+import { HighLightDirective } from './Directives/high-light.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SearchComponent } from './search/search.component';
     PipecustomPipe,
     AboutComponent,
     PageNotFoundComponent,
-    SearchComponent
+    SearchComponent,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
