@@ -6,7 +6,7 @@
         <th>Name</th>
         <tr *ngFor="let fruit of fruits; let i=index">
             <td>{{i+1}}</td>
-            <td>{{fruit}}</td>
+            <td>{{fruit | uppercase}}</td>
         </tr>
     </table>
 
@@ -20,10 +20,14 @@
             <td>{{i+1}}</td>
             <td>{{fruit.name}}</td>
             <td>
-                <span [ngClass]="{'negative-number': fruit.price < 0}">{{fruit.price}}</span>
+                <span [ngClass]="{'negative-number': fruit.price < 0}">{{fruit.price | currency: 'USD': 'symbol': '1.2'}}</span>
             </td>
-            <td>
+            <!-- <td>
                 <span *ngIf="fruit.isSale === true">Up sale</span>
+            </td> -->
+
+            <td>
+                <span> {{fruit.isSale | pipecustom : 'test' : 'symbol': 'test-symbol'}}</span>
             </td>
         </tr>
     </table>
