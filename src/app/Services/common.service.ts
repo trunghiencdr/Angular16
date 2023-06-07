@@ -19,4 +19,8 @@ export class CommonService {
     return number * number
   }
 
+  submitData(name: any){
+    console.log('Send data to server:', name)
+  }
+
 }
