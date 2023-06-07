@@ -1,0 +1,18 @@
+<p>reactive-form works!</p>
+
+<form [formGroup]="checkoutForm" (ngSubmit) = "onSubmit()">
+
+   Name: <input type="text" formControlName="name">
+
+   <div *ngIf = "!checkoutForm.controls.name.valid" style="color:red">
+    Name is required
+</div>
+
+    Address: <input type="text" formControlName="address">
+  
+  <button [disabled] = "!checkoutForm.valid">Purchase</button>
+<p>{{checkoutForm.status}}</p>
+  </form>
+
+
+
