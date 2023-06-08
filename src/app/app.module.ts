@@ -14,6 +14,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     HighLightDirective,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
-    GetDataComponent
+    GetDataComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
